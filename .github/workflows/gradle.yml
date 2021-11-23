@@ -28,10 +28,3 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build Result
-      run: ls build/libs
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.3
-      with:
-        name: spring-gumball
-        path: build/libs/spring-gumball-2.0.jar
