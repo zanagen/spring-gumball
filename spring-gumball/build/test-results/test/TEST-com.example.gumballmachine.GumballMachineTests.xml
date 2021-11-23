@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.gumballmachine.GumballMachineTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-23T08:39:17" hostname="Big-Sister" time="0.033">
+  <properties/>
+  <testcase name="testHappyPath()" classname="com.example.gumballmachine.GumballMachineTests" time="0.033"/>
+  <system-out><![CDATA[Mighty Gumball, Inc.
+Spring Boot Standing Gumball Model #2021
+
+
+Machine is waiting for quarter
+
+You inserted a quarter
+You turned...
+A gumball comes rolling out the slot...
+Mighty Gumball, Inc.
+Spring Boot Standing Gumball Model #2021
+
+
+Machine is waiting for quarter
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
