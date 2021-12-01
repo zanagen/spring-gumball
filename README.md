@@ -65,9 +65,11 @@ The image below displays the result
 
 ![workflow-1.png](images/workflow-1.png)
 
-5. Click on the `New workflow` button. Scroll down and expand the page by clicking on `More continuous integration workflows...`. Select the option `Build and Deploy to GKE`. This generates a `google.yml`.
+5. Navigate to the `Code` tab, and click on the `deployment.yaml` file. Change the number of replicas from `4` to `2` and commit changes.
 
-6. Replace the code with the following:
+6. Click on the `New workflow` button. Scroll down and expand the page by clicking on `More continuous integration workflows...`. Select the option `Build and Deploy to GKE`. This generates a `google.yml`.
+
+7. Replace the code with the following:
 
 ```yml
 name: Build and Deploy to GKE
@@ -153,9 +155,7 @@ jobs:
         #kubectl get services -o wide
 ```
 
-7. Commit the new file to the main branch. This file will be created in the `spring-gumball/.github/workflows/` folder.
-
-8. Navigate to the `Code` tab, and click on the `deployment.yaml` file. Change the number of replicas from `4` to `2` and commit changes.
+8. Commit the new file to the main branch. This file will be created in the `spring-gumball/.github/workflows/` folder.
 
 9. Navigate to the `Actions` tab, and wait for the yellow indicator to turn `green`. If the indicator is `yellow`, this means the job is running, and if the indicator is `red`, then the job failed.
 
@@ -174,6 +174,10 @@ The image below displays the result
  - Navigate to left panel default-pool > Nodes
  - Change machine type to small (2vCPU, 2GB RAM)
  - Click on Create
+
+The image below displays the result of creating the cluster
+
+![cloud-1.png](images/cloud-1.png)
 
 2. Expand the `Google Cloud Platform` hamburger panel, and navigate to IAM & Admin > Service Accounts > Create Service Account.
 
@@ -204,4 +208,26 @@ The image below displays the release
 
 8. Navigate to the `Actions` tab and rerun the jobs in the `Build and Deploy to GKE` workflow. Then navigate to the Google Cloud Platform and check that the service and deployment pods are running.
 
+The images below display the deployment and service pods
+
+![cloud-2.png](images/cloud-2.png)
+![cloud-3.png](images/cloud-3.png)
+
+9. In the Google Cloud Platform, navigate to `Services & Ingress`, checkmark the service pod, and click on the `Create Ingress` button.
+
+10. In `Backend configuration`, set the name to be `spring-gumball-lb`. In `Host and path rules`, select `spring-gumball-service` as the backend. Then click the `Create` button.
+
+The image below displays the ingress creation
+
+![cloud-4.png](images/cloud-4.png)
+![cloud-5.png](images/cloud-5.png)
+
+11. Under the `Ingress` tab, copy the IP address under `Frontends` in a new tab.
+
+The image below displays the application
+
+![cloud-6.png](images/cloud-6.png)
+
 ## Discussion
+
+I was unable to set up the Build and Deploy to GKE workflow
