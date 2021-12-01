@@ -4,9 +4,7 @@
  - [Code Setup](##code-setup)
  - [CI Workflow (Part 1)](##ci-workflow-(part-1))
  - [CI Workflow (Part 2)](##ci-workflow-(part-2))
- - [Discussion]()
  <!-- - [x] test        - THIS ADDS A CHECK-MARKED CHECK BOX -->
- - [Discussion](##discussion)
  - *No fixed header-linking in README file, please use `Ctrl + F` to search.*
 
 ## Code Setup
@@ -206,6 +204,10 @@ The image below displays the release
 
 ![workflow-4.png](images/workflow-4.png)
 
+The image below displays the workflows
+
+![workflow-5.png](images/workflow-5.png)
+
 8. Navigate to the `Actions` tab and rerun the jobs in the `Build and Deploy to GKE` workflow. Then navigate to the Google Cloud Platform and check that the service and deployment pods are running.
 
 The images below display the deployment and service pods
@@ -227,7 +229,3 @@ The image below displays the ingress creation
 The image below displays the application
 
 ![cloud-6.png](images/cloud-6.png)
-
-## Discussion
-
-I was unable to set up the Build and Deploy to GKE workflow
